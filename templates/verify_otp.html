@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Verify OTP - K3 Multi Solution{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-sm p-4">
+                <div class="text-center mb-3">
+                    <i class="fa-solid fa-shield-halved fa-3x text-primary"></i>
+                    <h3 class="mt-2">Enter OTP</h3>
+                    <p class="text-muted">OTP sent to {{ mobile }}</p>
+                </div>
+
+                {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+
+                <form method="POST" action="/verify-otp">
+                    <div class="mb-3">
+                        <label class="form-label">Enter 4-Digit OTP</label>
+                        <input type="text" class="form-control text-center fs-3" name="otp"
+                               maxlength="4" pattern="[0-9]{4}" placeholder="0000" required
+                               style="letter-spacing: 10px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Verify & Login</button>
+                </form>
+
+                <p class="text-center mt-3 text-muted small">
+                    Check your terminal/console for the OTP (simulated for testing)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

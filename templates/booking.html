@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Book a Service - K3 Multi Solution{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <h1 class="text-center mb-4">Book a Service</h1>
+
+            <form method="POST" action="/booking" class="card shadow-sm p-4">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contact" name="contact"
+       pattern="[0-9]{10}" placeholder="10-digit mobile number"
+       value="{{ user_mobile }}" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="service_type" class="form-label">Service Type</label>
+                    <select class="form-select" id="service_type" name="service_type" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="AC" {% if preselected_service == 'AC' %}selected{% endif %}>AC Installation & Repair</option>
+                        <option value="UPS" {% if preselected_service == 'UPS' %}selected{% endif %}>UPS Battery Sales & Service</option>
+                        <option value="CCTV" {% if preselected_service == 'CCTV' %}selected{% endif %}>CCTV Camera Installation</option>
+                        <option value="Electrical" {% if preselected_service == 'Electrical' %}selected{% endif %}>Electrical Work</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="preferred_time" class="form-label">Preferred Date & Time</label>
+                    <input type="datetime-local" class="form-control" id="preferred_time" name="preferred_time" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="notes" class="form-label">Additional Notes (Optional)</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3"
+                              placeholder="E.g. AC brand, model, specific issue, address details..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100">Submit Booking</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

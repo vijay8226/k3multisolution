@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - K3 Multi Solution{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <h1 class="text-center mb-5">Our Services</h1>
+
+    <div class="row g-4">
+
+        <!-- AC Service -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-snowflake fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">AC Installation & Repair</h4>
+                    <p class="card-text">
+                        New AC installation, regular servicing, gas refilling, and repair
+                        for all brands (split, window, and central AC units).
+                    </p>
+                    <a href="/booking?service=AC" class="btn btn-primary">Book This Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPS Battery -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-car-battery fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">UPS Battery Sales & Service</h4>
+                    <p class="card-text">
+                        Sales of new UPS systems and batteries, installation,
+                        replacement, and maintenance service for home and office.
+                    </p>
+                    <a href="/booking?service=UPS" class="btn btn-primary">Book This Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CCTV -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-video fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">CCTV Camera Installation</h4>
+                    <p class="card-text">
+                        Security camera setup for homes, shops, and offices —
+                        including wiring, DVR/NVR setup, and mobile app configuration.
+                    </p>
+                    <a href="/booking?service=CCTV" class="btn btn-primary">Book This Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Electrical -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-bolt fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">Electrical Work</h4>
+                    <p class="card-text">
+                        Full electrical contracts for new buildings, complete rewiring,
+                        switchboard upgrades, and general electrical repairs.
+                    </p>
+                    <a href="/booking?service=Electrical" class="btn btn-primary">Book This Service</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

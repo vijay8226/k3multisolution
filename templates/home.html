@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}K3 Multi Solution - Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to K3 Multi Solution</h1>
+        <p class="lead">AC | UPS Battery | CCTV Camera | Electrical Work - All in One Place</p>
+        <a href="/booking" class="btn btn-light btn-lg mt-3">Book a Service</a>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row g-4">
+
+        <div class="col-md-3 col-sm-6">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-snowflake fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">AC Installation & Repair</h5>
+                    <p class="card-text">Sales, installation, service, and repair for all AC brands.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-car-battery fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">UPS Battery Sales & Service</h5>
+                    <p class="card-text">UPS and battery sales, installation, and maintenance.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-video fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">CCTV Camera Installation</h5>
+                    <p class="card-text">Security camera installation and setup for home & business.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-bolt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Electrical Work</h5>
+                    <p class="card-text">Full contracts for new builds, rewiring, and electrical repairs.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
